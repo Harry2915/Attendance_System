@@ -6,7 +6,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    android:background="@color/Accent"
+
     tools:context=".activity.MainActivity" >
 
     <ImageView
@@ -16,22 +16,25 @@
         android:layout_centerHorizontal="true"
         android:layout_marginLeft="30dp"
         android:layout_marginTop="100dp"
-        android:src="@drawable/students"></ImageView>
+        android:src="@drawable/students" />
 
     <TextView
         android:layout_width="295dp"
         android:layout_height="77dp"
         android:layout_alignParentStart="true"
-        android:layout_alignParentLeft="true"
-        android:layout_marginStart="57dp"
-        android:layout_marginLeft="40dp"
+
+
+
         android:layout_marginTop="430dp"
         android:fontFamily="cursive"
         android:gravity="center"
-        android:textColor="@color/PrimaryDark"
+android:layout_marginLeft="20dp"
         android:shadowColor="@color/primaryLight"
         android:text="AttendancePortal"
-        android:textSize="40sp"></TextView>
+        android:textColor="@color/darkBlue"
+
+        android:textStyle="bold"
+        android:textSize="40sp" />
 
     <Button
         android:id="@+id/buttonstart"
@@ -39,10 +42,11 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="600dp"
         android:state_focused="false" android:state_pressed="true"
-        android:drawable="@color/primaryLight"
+
         android:layout_centerHorizontal="true"
+        android:background="@drawable/custom_button_border2"
         android:shadowColor="@color/app_background"
-        android:background="@drawable/boarder_buttons"
+        android:textColor="#f0f0f0"
         android:text="Go Ahead" />
 
 </RelativeLayout>

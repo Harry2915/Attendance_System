@@ -45,7 +45,7 @@ public class LoginActivity extends Activity {
 			public void onItemSelected(AdapterView<?> arg0, View view,
 					int arg2, long arg3) {
 				// TODO Auto-generated method stub
-				((TextView) arg0.getChildAt(0)).setTextColor(Color.WHITE);
+				((TextView) arg0.getChildAt(0)).setTextColor(Color.BLACK);
 				userrole =(String) spinnerloginas.getSelectedItem();
 
 			}
@@ -138,4 +138,8 @@ public class LoginActivity extends Activity {
 		return true;
 	}
 
+	@Override
+	public void onBackPressed() {
+		return;
+	}
 }
