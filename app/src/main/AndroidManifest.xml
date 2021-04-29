@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.harish.hibare.attendance_system">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Attendance_System"> <activity
+        android:name="com.harish.hibare.attendance_system.activity.MainActivity"
+        android:label="@string/app_name" >
+        <intent-filter>
+            <action android:name="android.intent.action.MAIN" />
+
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter>
+    </activity>
+        <activity
+            android:name="com.harish.hibare.attendance_system.activity.LoginActivity"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name="com.harish.hibare.attendance_system.activity.MenuActivity"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name="com.harish.hibare.attendance_system.activity.AddFacultyActivity"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name="com.harish.hibare.attendance_system.activity.AddStudentActivity"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name="com.harish.hibare.attendance_system.activity.ViewFacultyActivity"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name="com.harish.hibare.attendance_system.activity.ViewStudentActivity"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name="com.harish.hibare.attendance_system.activity.TestActivity"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name="com.harish.hibare.attendance_system.activity.ViewStudentByBranchYear"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name="com.harish.hibare.attendance_system.activity.AddAttandanceSessionActivity"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name="com.harish.hibare.attendance_system.activity.AddAttendanceActivity"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name="com.harish.hibare.attendance_system.activity.ViewAttendanceByFacultyActivity"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name="com.harish.hibare.attendance_system.activity.ViewAttendancePerStudentActivity"
+            android:label="@string/app_name" >
+        </activity>
+
+    </application>
+
+
+</manifest>
