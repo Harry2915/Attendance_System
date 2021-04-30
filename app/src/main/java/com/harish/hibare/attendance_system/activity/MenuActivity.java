@@ -14,26 +14,27 @@ import android.view.Menu;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
+import android.widget.RelativeLayout;
 
 public class MenuActivity extends Activity {
 
-	Button addStudent;
-	Button addFaculty;
-	Button viewStudent;
-	Button viewFaculty;
-	Button logout;
-	Button attendancePerStudent;
+	RelativeLayout addStudent;
+	RelativeLayout addFaculty;
+	RelativeLayout viewStudent;
+	RelativeLayout viewFaculty;
+	RelativeLayout logout;
+	RelativeLayout attendancePerStudent;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.menu);
 
-		addStudent =(Button)findViewById(R.id.buttonaddstudent);
-		addFaculty =(Button)findViewById(R.id.buttonaddfaculty);
-		viewStudent =(Button)findViewById(R.id.buttonViewstudent);
-		viewFaculty =(Button)findViewById(R.id.buttonviewfaculty);
-		logout =(Button)findViewById(R.id.buttonlogout);
+		addStudent =(RelativeLayout)findViewById(R.id.buttonaddstudent);
+		addFaculty =(RelativeLayout)findViewById(R.id.buttonaddfaculty);
+		viewStudent =(RelativeLayout)findViewById(R.id.buttonViewstudent);
+		viewFaculty =(RelativeLayout)findViewById(R.id.buttonviewfaculty);
+		logout =(RelativeLayout)findViewById(R.id.buttonlogout);
 		
 		addStudent.setOnClickListener(new OnClickListener() {
 
@@ -90,7 +91,7 @@ public class MenuActivity extends Activity {
 				startActivity(intent);
 			}
 		});
-		attendancePerStudent=(Button)findViewById(R.id.attendancePerStudentButton);
+		attendancePerStudent=(RelativeLayout)findViewById(R.id.attendancePerStudentButton);
 		attendancePerStudent.setOnClickListener(new OnClickListener() {
 			
 			@Override

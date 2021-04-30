@@ -2,69 +2,320 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/clg"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context=".activity.MainActivity" >
+    tools:context=".activity.MainActivity">
 
-    <Button
-        android:id="@+id/buttonViewstudent"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/buttonaddstudent"
-        android:background="@drawable/roundedbutton"
-        android:layout_marginTop="18dp"
-        android:text="View student" />
+        android:layout_height="match_parent"
+        android:paddingBottom="@dimen/dimen20dp"
+        android:background="@color/white"
+        tools:context=".activity.MenuActivity">
 
-    <Button
-        android:id="@+id/buttonlogout"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/buttonviewfaculty"
-        android:layout_alignParentBottom="true"
-        android:background="@drawable/roundedbutton"
-        android:text="Logout" />
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_marginTop="@dimen/dimen10dp"
+            android:layout_height="match_parent"
+            android:background="#FFFFFF">
 
-    <Button
-        android:id="@+id/buttonviewfaculty"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/buttonlogout"
-        android:layout_alignLeft="@+id/buttonaddfaculty"
-        android:layout_marginBottom="16dp"
-        android:background="@drawable/roundedbutton"
-        android:text="View faculty" />
 
-    <Button
-        android:id="@+id/buttonaddfaculty"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/buttonviewfaculty"
-        android:layout_alignLeft="@+id/buttonViewstudent"
-        android:layout_marginBottom="14dp"
-        android:background="@drawable/roundedbutton"
-        android:text="Add faculty" />
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="154dp"
+                android:text="Admin
+                 Dashboard"
+                android:textColor="@color/darkBlue"
+                android:textSize="30sp"
+                android:textStyle="bold"
 
-    <Button
-        android:id="@+id/buttonaddstudent"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/buttonViewstudent"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="22dp"
-        android:background="@drawable/roundedbutton"
-        android:text="Add student" />
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.135" />
 
-    <Button
-        android:id="@+id/attendancePerStudentButton"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/buttonViewstudent"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="29dp"
-        android:background="@drawable/roundedbutton"
-        android:text="Attendance Per Student" />
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginBottom="39dp"
+                android:text="Discover the RESPECT, VALUE and POWER of the Administrative Profession!"
+                android:textColor="@color/darkBlue"
+                app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+
+
+
+
+            <LinearLayout
+                android:id="@+id/linearLayout2"
+                android:layout_width="0dp"
+                android:layout_height="175dp"
+                android:orientation="horizontal"
+                android:layout_marginBottom="@dimen/dimen15dp"
+                android:padding="10dp"
+                android:layout_marginTop="@dimen/dimen15dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView2">
+                <androidx.cardview.widget.CardView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_margin="10dp"
+                    android:layout_weight="1">
+                    <RelativeLayout
+                        android:id="@+id/buttonaddstudent"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+                        <TextView
+                            android:id="@+id/textView6"
+
+                            android:layout_height="match_parent"
+                            android:layout_width="match_parent"
+                            android:gravity="center"
+                            android:layout_below="@id/bus1"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="30dp"
+                            android:background="@color/lightGray"
+                            android:text="Add Student"
+                            android:textColor="@color/darkBlue"
+                            android:textSize="20sp"
+                            />
+
+                        <ImageView
+                            android:id="@+id/bus1"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="15dp"
+                            android:src="@drawable/addcategory" />
+                    </RelativeLayout>
+                </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_margin="10dp"
+                    android:layout_weight="1">
+                    <RelativeLayout
+                        android:id="@+id/buttonaddfaculty"
+
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+                        <TextView
+                            android:id="@+id/textView7"
+                            android:layout_width="match_parent"
+                            android:gravity="center"
+                            android:layout_marginTop="30dp"
+                            android:layout_height="match_parent"
+                            android:layout_below="@id/train"
+                            android:layout_centerHorizontal="true"
+                            android:background="@color/lightGray"
+
+                            android:textColor="@color/darkBlue"
+                            android:text="Add Faculty"
+                            android:textSize="20sp"
+                            />
+
+                        <ImageView
+                            android:id="@+id/train"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="15dp"
+                            android:src="@drawable/addcategory"/>
+                    </RelativeLayout>
+                </androidx.cardview.widget.CardView>
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/linear3"
+                android:layout_width="0dp"
+                android:layout_height="175dp"
+                android:orientation="horizontal"
+                android:padding="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout2">
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/update"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_margin="10dp"
+                    android:layout_weight="1">
+                    <RelativeLayout
+                        android:id="@+id/buttonViewstudent"
+                        android:layout_width="match_parent"
+
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/textView8"
+                            android:layout_width="match_parent"
+                            android:gravity="center"
+                            android:layout_marginTop="30dp"
+                            android:layout_height="match_parent"
+                            android:layout_below="@id/cycle"
+                            android:layout_centerHorizontal="true"
+                            android:textColor="@color/darkBlue"
+                            android:background="@color/lightGray"
+                            android:text="View Student"
+                            android:textSize="20sp"
+                            />
+
+                        <ImageView
+                            android:id="@+id/cycle"
+
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="15dp"
+                            android:src="@drawable/profile"
+                            />
+                    </RelativeLayout>
+                </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/addbanner"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_margin="10dp"
+                    android:layout_weight="1">
+                    <RelativeLayout
+                        android:id="@+id/buttonviewfaculty"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        >
+
+                        <TextView
+                            android:id="@+id/textView9"
+                            android:layout_width="match_parent"
+                            android:gravity="center"
+                            android:layout_height="match_parent"
+                            android:layout_below="@id/airplane"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="@dimen/dimen30dp"
+                            android:background="@color/lightGray"
+                            android:text="View Faculty"
+                            android:textColor="@color/darkBlue"
+                            android:textSize="20sp"
+                            />
+
+                        <ImageView
+                            android:id="@+id/airplane"
+                            android:layout_width="100dp"
+                            android:layout_height="50dp"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="15dp"
+                            android:src="@drawable/profile" />
+                    </RelativeLayout>
+                </androidx.cardview.widget.CardView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linear4"
+                android:layout_width="0dp"
+                android:layout_height="175dp"
+                android:orientation="horizontal"
+                android:padding="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linear3">
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/totalproducts"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_margin="10dp"
+                    android:layout_weight="1">
+                    <RelativeLayout
+                        android:id="@+id/attendancePerStudentButton"
+                        android:layout_width="match_parent"
+
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:gravity="center"
+                            android:layout_height="match_parent"
+                            android:layout_below="@id/attend"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="@dimen/dimen30dp"
+                            android:background="@color/lightGray"
+                            android:text="Per Student"
+                            android:textColor="@color/darkBlue"
+                            android:textSize="20sp"  />
+                        <TextView
+                            android:id="@+id/txtproduct"
+                            android:layout_width="match_parent"
+                            android:layout_height="75dp"
+                            android:text="Click here to check"
+                            android:gravity="top|center"
+
+                            android:textColor="@color/white"
+
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="@dimen/dimen5dp"
+                            />
+
+
+                        <ImageView
+                            android:id="@+id/attend"
+                            android:layout_width="100dp"
+                            android:layout_height="@dimen/dimen50dp"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="15dp"
+                             android:src= "@drawable/attend" />
+                    </RelativeLayout>
+                </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/dailyselling"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_margin="10dp"
+                    android:layout_weight="1">
+                    <RelativeLayout
+                        android:id="@+id/buttonlogout"
+                        android:layout_width="match_parent"
+
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/txvSelling"
+                            android:layout_width="match_parent"
+                            android:gravity="center"
+                            android:layout_height="match_parent"
+                            android:layout_below="@id/logout"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="@dimen/dimen30dp"
+                            android:background="@color/lightGray"
+                            android:text="Logout"
+                            android:textColor="@color/darkBlue"
+                            android:textSize="20sp" />
+
+                        <ImageView
+                            android:id="@+id/logout"
+                            android:layout_width="100dp"
+                            android:layout_height="@dimen/dimen50dp"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="15dp"
+                            android:src="@drawable/logout" />
+                    </RelativeLayout>
+                </androidx.cardview.widget.CardView>
+            </LinearLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
 
 </RelativeLayout>
