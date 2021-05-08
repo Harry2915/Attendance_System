@@ -188,12 +188,11 @@
                             android:textAppearance="?android:attr/textAppearanceSmall"
                             android:textColor="#00a5ff" />
 
-                        <Spinner
+                        <androidx.appcompat.widget.AppCompatSpinner
                             android:id="@+id/spinnerdept"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_alignParentLeft="true"
-                            android:layout_below="@+id/textView1" />
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:padding="@dimen/dimen10dp" />
 
                         <TextView
                             android:id="@+id/textView2"
@@ -206,14 +205,11 @@
                             android:textAppearance="?android:attr/textAppearanceSmall"
                             android:textColor="#00a5ff" />
 
-                        <Spinner
+                        <androidx.appcompat.widget.AppCompatSpinner
                             android:id="@+id/spinneryear"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_below="@+id/textView2"
-                            android:layout_toRightOf="@+id/textViewPassword" />
-
-
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:padding="@dimen/dimen10dp" />
 
 
 
