@@ -20,7 +20,7 @@ public class ViewStudentActivity extends Activity {
 
 	Spinner spinnerbranch,spinneryear;
 	String userrole,branch,year;
-	private String[] branchString = new String[] { "cse"};
+	private String[] branchString = new String[] { "CSE","MECH"};
 	private String[] yearString = new String[] {"SE","TE","BE"};
 	
 	Button submit;
@@ -41,7 +41,7 @@ public class ViewStudentActivity extends Activity {
 			public void onItemSelected(AdapterView<?> arg0, View view,
 					int arg2, long arg3) {
 				// TODO Auto-generated method stub
-				((TextView) arg0.getChildAt(0)).setTextColor(Color.WHITE);
+				((TextView) arg0.getChildAt(0)).setTextColor(Color.BLACK);
 				branch =(String) spinnerbranch.getSelectedItem();
 
 			}
@@ -65,7 +65,7 @@ public class ViewStudentActivity extends Activity {
 			public void onItemSelected(AdapterView<?> arg0, View view,
 					int arg2, long arg3) {
 				// TODO Auto-generated method stub
-				((TextView) arg0.getChildAt(0)).setTextColor(Color.WHITE);
+				((TextView) arg0.getChildAt(0)).setTextColor(Color.BLACK);
 				year =(String) spinneryear.getSelectedItem();
 
 			}

@@ -12,6 +12,7 @@ import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.harish.hibare.attendance_system.R;
@@ -28,7 +29,7 @@ public class AddFacultyActivity extends Activity {
 	EditText textaddress;
 	EditText textusername;
 	EditText textpassword;
-
+	TextView Cancel_Button;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -43,7 +44,7 @@ public class AddFacultyActivity extends Activity {
 		textusername=(EditText)findViewById(R.id.editTextUserName);
 		textpassword=(EditText)findViewById(R.id.editTextPassword);
 		registerButton=(Button)findViewById(R.id.RegisterButton);
-
+		Cancel_Button=(TextView)findViewById(R.id.Cancel_Button);
 		registerButton.setOnClickListener(new OnClickListener() {
 
 			@Override
@@ -97,7 +98,13 @@ public class AddFacultyActivity extends Activity {
 
 			}
 		});
-
+		Cancel_Button.setOnClickListener(new OnClickListener() {
+			@Override
+			public void onClick(View view) {
+				Intent intent =new Intent(AddFacultyActivity.this,MenuActivity.class);
+				startActivity(intent);
+			}
+		});
 
 
 	}
