@@ -26,7 +26,7 @@ public class AddStudentActivity extends Activity {
 	Button registerButton;
 	EditText textFirstName;
 	EditText textLastName;
-
+    TextView Cancel_Button;
 	EditText textcontact;
 	EditText textaddress;
 	Spinner spinnerbranch,spinneryear;
@@ -46,7 +46,7 @@ public class AddStudentActivity extends Activity {
 		textcontact=(EditText)findViewById(R.id.editTextPhone);
 		textaddress=(EditText)findViewById(R.id.editTextaddr);
 		registerButton=(Button)findViewById(R.id.RegisterButton);
-
+		Cancel_Button=(TextView)findViewById(R.id.Cancel_Button);
 		spinnerbranch.setOnItemSelectedListener(new OnItemSelectedListener() {
 			@Override
 			public void onItemSelected(AdapterView<?> arg0, View view,
@@ -139,6 +139,13 @@ public class AddStudentActivity extends Activity {
 					Toast.makeText(getApplicationContext(), "student added successfully", Toast.LENGTH_SHORT).show();
 
 				}
+			}
+		});
+		Cancel_Button.setOnClickListener(new OnClickListener() {
+			@Override
+			public void onClick(View view) {
+				Intent intent =new Intent(AddStudentActivity.this,MenuActivity.class);
+				startActivity(intent);
 			}
 		});
 	}
