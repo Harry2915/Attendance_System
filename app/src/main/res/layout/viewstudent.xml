@@ -1,56 +1,122 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    android:background="@drawable/clg"
-    tools:context=".activity.MainActivity" >
+    >
 
-    <TextView
-        android:id="@+id/textView1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="29dp"
-        android:text="Select branch"
-        android:textAppearance="?android:attr/textAppearanceSmall" />
-
-    <Spinner
-        android:id="@+id/spinnerbranchView"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentRight="true"
-        android:layout_below="@+id/textView1"
-        android:layout_marginTop="14dp" />
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true"
+        >
 
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/textView1"
-        android:layout_below="@+id/spinnerbranchView"
-        android:text="Select year"
-        android:textAppearance="?android:attr/textAppearanceSmall" />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
 
-    <Spinner
-        android:id="@+id/spinneryearView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/textView2"
-        android:layout_centerHorizontal="true" />
 
-    <Button
-        android:id="@+id/submitButton"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/spinneryearView"
-        android:layout_marginTop="80dp"
-        android:background="@drawable/roundedbutton"
-        android:text="Submit" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen160dp"
+                android:orientation="vertical">
 
-</RelativeLayout>
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dimen160dp"
+                    android:background="@drawable/custom_back" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="40dp"
+                android:layout_marginRight="@dimen/dimen20dp"
+                android:layout_marginLeft="@dimen/dimen20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:text="View Students"
+                    android:textStyle="bold"
+                    android:textColor="#ffff"
+                    android:textSize="26sp"
+                    />
+
+
+
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimen30dp"
+                    android:layout_marginBottom="@dimen/dimen20dp"
+                    android:elevation="@dimen/dimen10dp"
+                    app:cardCornerRadius="@dimen/dimen20dp"
+                    >
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/dimen20dp"
+                        android:orientation="vertical"
+                        >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Select Branch"
+                            android:textColor="#00a5ff"
+                            android:layout_marginTop="@dimen/dimen20dp"
+                            />
+                        <androidx.appcompat.widget.AppCompatSpinner
+                            android:id="@+id/spinnerbranchView"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:padding="@dimen/dimen10dp" />
+
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Select Year"
+                            android:textColor="#00a5ff"
+                            android:layout_marginTop="@dimen/dimen20dp"
+                            />
+
+
+                        <androidx.appcompat.widget.AppCompatSpinner
+                            android:id="@+id/spinnerSE"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:padding="@dimen/dimen10dp" />
+
+
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:id="@+id/spinneryearView"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/dimen24dp"
+                            android:layout_marginRight="@dimen/dimen24dp"
+                            android:layout_marginBottom="@dimen/dimen24dp"
+                            android:background="@drawable/custom_button_border2"
+                            android:padding="@dimen/dimen12dp"
+                            android:layout_marginTop="@dimen/dimen20dp"
+                            android:text="Submit"
+                            android:textColor="@color/white"
+                            android:textAllCaps="false"
+                            android:textSize="@dimen/dimen18sp" />
+
+
+
+
+
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+            </LinearLayout>
+        </RelativeLayout>
+    </ScrollView>
+</layout>
