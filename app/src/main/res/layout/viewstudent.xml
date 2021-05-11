@@ -89,14 +89,14 @@
 
 
                         <androidx.appcompat.widget.AppCompatSpinner
-                            android:id="@+id/spinnerSE"
+                            android:id="@+id/spinneryearView"
                             android:layout_width="match_parent"
                             android:layout_height="50dp"
                             android:padding="@dimen/dimen10dp" />
 
 
                         <androidx.appcompat.widget.AppCompatButton
-                            android:id="@+id/spinneryearView"
+                            android:id="@+id/submitButton"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="@dimen/dimen24dp"
